@@ -44,3 +44,8 @@ CREATE TABLE attributions (
     FOREIGN KEY (besoin_id) REFERENCES besoins(id) ON DELETE CASCADE,
     FOREIGN KEY (don_id) REFERENCES dons(id) ON DELETE CASCADE
 );
+
+CREATE TABLE villes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
