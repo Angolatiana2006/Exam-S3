@@ -20,7 +20,7 @@ CREATE TABLE besoins (
     ville_id INT NOT NULL,
     besoin_type_id INT NOT NULL,
     quantite DECIMAL(10,2) NOT NULL,
-    unite VARCHAR(20) DEFAULT NULL, -- ex: kg, litres, Ar
+    unite VARCHAR(20) DEFAULT NULL, 
     FOREIGN KEY (ville_id) REFERENCES villes(id) ON DELETE CASCADE,
     FOREIGN KEY (besoin_type_id) REFERENCES besoins_types(id) ON DELETE CASCADE
 );
@@ -45,6 +45,7 @@ CREATE TABLE attributions (
     FOREIGN KEY (don_id) REFERENCES dons(id) ON DELETE CASCADE
 );
 
+<<<<<<< HEAD
 
 INSERT INTO villes (name) VALUES
 ('Antananarivo'),
@@ -85,3 +86,9 @@ INSERT INTO attributions (besoin_id, don_id, quantite) VALUES
 (2, 2, 100),
 (4, 3, 200),
 (6, 4, 10);
+=======
+CREATE TABLE villes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
+>>>>>>> 948df6d925d689e4526ba73e1fd820d06825074c

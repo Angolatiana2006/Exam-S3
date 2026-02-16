@@ -40,7 +40,7 @@
                             <a href="#"><i class="ti-plus"></i><span>Créer un besoin</span></a>
                         </li>
                         <li>
-                            <a href="#"><i class="ti-gift"></i><span>Créer un don</span></a>
+                            <a href="dons.php"><i class="ti-gift"></i><span>Créer un don</span></a>
                         </li>
                         <li>
                             <a href="#"><i class="ti-share"></i><span>Attribuer un don</span></a>
