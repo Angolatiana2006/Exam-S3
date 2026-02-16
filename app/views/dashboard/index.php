@@ -129,28 +129,19 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php foreach($besoins as $b): ?>
                                 <tr>
-                                    <td>Antsirabe</td>
-                                    <td>Riz</td>
-                                    <td>50 kg</td>
-                                    <td>30 kg</td>
-                                    <td class="text-danger">20 kg</td>
+                                    <td><?= htmlspecialchars($b['ville']) ?></td>
+                                    <td><?= htmlspecialchars($b['besoin']) ?></td>
+                                    <td><?= htmlspecialchars($b['quantite_demandee']) ?></td>
+                                    <td><?= htmlspecialchars($b['quantite_donnee']) ?></td>
+                                    <td class="<?= ($b['reste'] > 0) ? 'text-danger' : 'text-success' ?>">
+                                        <?= htmlspecialchars($b['reste']) ?>
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td>Antsirabe</td>
-                                    <td>Argent</td>
-                                    <td>200 000 Ar</td>
-                                    <td>100 000 Ar</td>
-                                    <td class="text-danger">100 000 Ar</td>
-                                </tr>
-                                <tr>
-                                    <td>Toamasina</td>
-                                    <td>Tôles</td>
-                                    <td>40</td>
-                                    <td>40</td>
-                                    <td class="text-success">0</td>
-                                </tr>
+                                <?php endforeach; ?>
                             </tbody>
+
                         </table>
                     </div>
 
