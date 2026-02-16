@@ -40,7 +40,7 @@
                             <a href="#"><i class="ti-plus"></i><span>Créer un besoin</span></a>
                         </li>
                         <li>
-                            <a href="dons.php"><i class="ti-gift"></i><span>Créer un don</span></a>
+                            <a href="dashboard/dons.php"><i class="ti-gift"></i><span>Créer un don</span></a>
                         </li>
                         <li>
                             <a href="#"><i class="ti-share"></i><span>Attribuer un don</span></a>
@@ -93,14 +93,15 @@
                     </a>
                 </div>
 
-                <div class="col-md-4">
-                    <a href="#" class="single-report text-center">
-                        <div class="s-report-inner pt--30 pb--30">
-                            <i class="fa fa-gift fa-2x mb-2"></i>
-                            <h4>Créer un don</h4>
-                        </div>
-                    </a>
+                    <div class="col-md-4">
+                    <a href="dons.php" class="single-report text-center">
+                 <div class="s-report-inner pt--30 pb--30">
+                 <i class="fa fa-gift fa-2x mb-2"></i>
+                 <h4>Créer un don</h4>
                 </div>
+            </a>
+        </div>
+
 
                 <div class="col-md-4">
                     <a href="#" class="single-report text-center">
