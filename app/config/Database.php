@@ -1,21 +1,23 @@
 <?php
 
 class Database {
+    private $host = "127.0.0.1"; // <- changer localhost en 127.0.0.1
+    private $dbname = "bngrc";
+    private $user = "root";
+    private $pass = ""; // ou ton mot de passe MySQL
 
-    private static $pdo;
-
-    public static function connect(){
-
-        if(!isset(self::$pdo)){
-            self::$pdo = new PDO(
-                "mysql:host=localhost;dbname=bngrc;charset=utf8",
-                "root",
-                ""
+    public function connect() {
+        try {
+            $conn = new PDO(
+                "mysql:host=".$this->host.";dbname=".$this->dbname, // <- TCP/IP
+                $this->user,
+                $this->pass
             );
-
-            self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $conn;
+        } catch(PDOException $e) {
+            die("Erreur de connexion : " . $e->getMessage());
         }
-
-        return self::$pdo;
     }
 }
+
