@@ -20,7 +20,7 @@ CREATE TABLE besoins (
     ville_id INT NOT NULL,
     besoin_type_id INT NOT NULL,
     quantite DECIMAL(10,2) NOT NULL,
-    unite VARCHAR(20) DEFAULT NULL, -- ex: kg, litres, Ar
+    unite VARCHAR(20) DEFAULT NULL, 
     FOREIGN KEY (ville_id) REFERENCES villes(id) ON DELETE CASCADE,
     FOREIGN KEY (besoin_type_id) REFERENCES besoins_types(id) ON DELETE CASCADE
 );

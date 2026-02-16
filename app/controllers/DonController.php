@@ -9,9 +9,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $quantite = $_POST['quantite'];
 
     if ($model->ajouterDon($type, $quantite)) {
-        header("Location: dons.html?success=1");
+        header("Location: dons.php?success=1");
     } else {
-        header("Location: dons.html?error=1");
+        header("Location: dons.php?error=1");
     }
 }
 ?>
